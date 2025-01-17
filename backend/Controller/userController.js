@@ -34,3 +34,17 @@ exports.checkLogin = async(u)=>{
     return result;
 
 }
+
+exports.deleteAll = async()=>{
+    let data = await userModel.deleteMany();
+    return data;
+
+}
+
+exports.updatePwd = async(u)=>{
+    let condition = {_id:u.id,pwd:u.pwd}
+    let newdata = {pwd:u.newpwd}
+    let data = await userModel.updateOne(condition,{$set:newpwd})
+    console.log(data);
+    return JSON.stringify(data.modifiedCount);
+}
