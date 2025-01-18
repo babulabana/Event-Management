@@ -13,6 +13,7 @@ import Userprofile from './components/Userprofile'
 import profileContext from './context/profileContext'
 import Togglelogin from './components/Togglelogin'
 import AdminLogin from './components/admin/AdminLogin'
+import ChangePwd from './components/ChangePwd'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,6 +34,7 @@ function App() {
           <Route path='/logout' element={<Logout></Logout>}></Route>
           <Route path='/register' element={<UserRegistration></UserRegistration>} ></Route>
            <Route path='/userprofile' element={<Userprofile></Userprofile>}></Route>
+           <Route path="/updatepassword" element={<ChangePwd></ChangePwd>}></Route>
         </Routes>
       </profileContext.Provider>
     </userContext.Provider>

@@ -1,4 +1,4 @@
 import { createContext } from "react";
 
-const profileContext =createContext();
+const profileContext =createContext(undefined);
 export default profileContext;

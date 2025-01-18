@@ -18,6 +18,7 @@ router.post("/login",async(req,res)=>{
 })
 
 router.put("/updatepassword",async(req,res)=>{
+    console.log("Data in Router",req.body)
     let d = await userController.updatePwd(req.body);
     res.send(d);
 })
