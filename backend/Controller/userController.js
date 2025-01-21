@@ -45,6 +45,14 @@ exports.updatePwd = async(u)=>{
     let condition = {_id:u.id,pwd:u.pwd}
     let newdata = {pwd:u.newpwd}
     let data = await userModel.updateOne(condition,{$set:newdata})
-    console.log(data);
+    // console.log(data);
+    return JSON.stringify(data.modifiedCount);
+}
+
+exports.updateProfile = async(u)=>{
+    let condition = {_id:u.id,pwd:u.pwd}
+    let newdata = {username : u.username,contact: u.contact,}
+    let data = await userModel.updateOne(condition,{$set:newdata})
+    // console.log(data);
     return JSON.stringify(data.modifiedCount);
 }

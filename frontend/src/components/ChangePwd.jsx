@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router'
 import axios from 'axios'
 export default function ChangePwd() {
     let user = useContext(userContext)
-    let  [msg,setmsg ] = useState("")
+    const  [msg,setmsg ] = useState("")
     
     let profileData = useContext(profileContext)
     const navigate = useNavigate()

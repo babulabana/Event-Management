@@ -35,10 +35,11 @@ function App() {
           <Route path='/register' element={<UserRegistration></UserRegistration>} ></Route>
            <Route path='/userprofile' element={<Userprofile></Userprofile>}></Route>
            <Route path="/updatepassword" element={<ChangePwd></ChangePwd>}></Route>
+           <Route path='/updateprofile' element={<Userprofile></Userprofile>}></Route>
         </Routes>
       </profileContext.Provider>
     </userContext.Provider>
-    <AdminLogin></AdminLogin>
+    {/* <AdminLogin></AdminLogin> */}
     {/* <Userprofile></Userprofile> */}
     {/* <UserRegistration></UserRegistration> */}
     {/* <UserLogin></UserLogin> */}

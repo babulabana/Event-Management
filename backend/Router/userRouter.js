@@ -22,6 +22,11 @@ router.put("/updatepassword",async(req,res)=>{
     let d = await userController.updatePwd(req.body);
     res.send(d);
 })
+router.put("/updateprofile",async(req,res)=>{
+    console.log("Data in Router",req.body)
+    let d = await userController.updateProfile(req.body);
+    res.send(d);
+})
 router.get("/deleteall",async(req,res)=>{
     let d = await userController.deleteAll();
     res.send(d);
