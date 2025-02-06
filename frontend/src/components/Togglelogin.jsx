@@ -8,7 +8,7 @@ export default function Togglelogin() {
     let uifalse = <div><Link to="/register">Register</Link >|<Link to="/login">Login</Link></div>
     let uitrue = <div><Link to="/userprofile">Profile</Link>|<Link to="/logout">Logout</Link>|<Link to = '/updatepassword'>Change Password</Link></div>
   return (
-    <div>
+    <div className="flex  justify-center">
       {user.islogin?uitrue:uifalse}
     </div>
   )
